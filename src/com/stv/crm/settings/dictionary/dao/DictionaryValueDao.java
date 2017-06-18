@@ -33,7 +33,7 @@ public interface DictionaryValueDao {
 	 * 注解和xml方式可以同时使用
 	 * 但是不要存在冲突
 	 */
-	//@Select("select v.id id, v.value value, v.text text, v.orderNo orderNo, v.typeCode typeCode, t.name typeName from tbl_dictionary_value v, tbl_dictionary_type t where id = ? and v.typeCode = t.code")
+	//@Select("select v.id id, v.value value, v.text text, v.orderNo orderNo, v.typeCode typeCode, t.name typeName from tbl_dictionary_value v, tbl_dictionary_type t where id = #{id} and v.typeCode = t.code")
 	Map<String, Object> getByIdWithCodeName(String id);
 	
 }

@@ -49,7 +49,7 @@ public class DictValueEditController extends HttpServlet {
 				.getService(new DictionaryValueServiceImpl());
 		Map<String, Object> resultMap = valueService.getByIdWithCodeName(id);
 
-		request.setAttribute("typeName", (String) resultMap.get("codeName"));
+		request.setAttribute("typeName", (String) resultMap.get("typeName"));
 		request.setAttribute("dictValue", (DictionaryValue) resultMap.get("dictValue"));
 		/**
 		 * 转发使用的是内部路径 内部路径是除掉项目名的绝对路径
